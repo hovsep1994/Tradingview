@@ -1,0 +1,472 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Tradingview",
+		"_postman_id": "98c2ed5f-6164-30f0-47d5-6291625f9bd2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"description": "",
+			"item": [
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/authorize",
+					"request": {
+						"url": " https://rest-demo.tradingview.com/tradingview/v1/authorize",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "login",
+									"value": "test",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "2faCode",
+									"value": "false",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Broker Configuration",
+			"description": "",
+			"item": [
+				{
+					"name": "https://rest-demo.tradingview.com/tradingview/v1/config ?locale=en",
+					"request": {
+						"url": {
+							"raw": "https://rest-demo.tradingview.com/tradingview/v1/config\n?locale=en",
+							"protocol": "https",
+							"host": [
+								"rest-demo",
+								"tradingview",
+								"com"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "en",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/mapping",
+					"request": {
+						"url": " https://rest-demo.tradingview.com/tradingview/v1/mapping",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"description": "",
+			"item": [
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/accounts",
+					"request": {
+						"url": " https://rest-demo.tradingview.com/tradingview/v1/accounts",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/state?locale=en",
+					"request": {
+						"url": {
+							"raw": "https://rest-demo.tradingview.com/tradingview/v1/accounts/0/state?locale=en",
+							"protocol": "https",
+							"host": [
+								"rest-demo",
+								"tradingview",
+								"com"
+							],
+							"path": [
+								"tradingview",
+								"v1",
+								"accounts",
+								"0",
+								"state"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "en",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/orders",
+					"request": {
+						"url": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/orders",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/positions",
+					"request": {
+						"url": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/positions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/executions?instrument&instrument=FX_IDC:EURUSD",
+					"request": {
+						"url": {
+							"raw": "https://rest-demo.tradingview.com/tradingview/v1/accounts/0/executions?instrument&instrument=FX_IDC:EURUSD",
+							"protocol": "https",
+							"host": [
+								"rest-demo",
+								"tradingview",
+								"com"
+							],
+							"path": [
+								"tradingview",
+								"v1",
+								"accounts",
+								"0",
+								"executions"
+							],
+							"query": [
+								{
+									"key": "instrument",
+									"value": "",
+									"equals": false,
+									"description": ""
+								},
+								{
+									"key": "instrument",
+									"value": "FX_IDC:EURUSD",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/instruments",
+					"request": {
+						"url": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/instruments",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/ordersHistory",
+					"request": {
+						"url": " https://rest-demo.tradingview.com/tradingview/v1/accounts/0/ordersHistory",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Market Data",
+			"description": "",
+			"item": [
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/quotes?symbols=EURUSD",
+					"request": {
+						"url": {
+							"raw": "https://rest-demo.tradingview.com/tradingview/v1/quotes?symbols=EURUSD",
+							"protocol": "https",
+							"host": [
+								"rest-demo",
+								"tradingview",
+								"com"
+							],
+							"path": [
+								"tradingview",
+								"v1",
+								"quotes"
+							],
+							"query": [
+								{
+									"key": "symbols",
+									"value": "EURUSD",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/depth?symbol=FX_IDC:EURUSD",
+					"request": {
+						"url": {
+							"raw": "https://rest-demo.tradingview.com/tradingview/v1/depth?symbol=FX_IDC:EURUSD",
+							"protocol": "https",
+							"host": [
+								"rest-demo",
+								"tradingview",
+								"com"
+							],
+							"path": [
+								"tradingview",
+								"v1",
+								"depth"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "FX_IDC:EURUSD",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Integration",
+			"description": "",
+			"item": [
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/symbol_info",
+					"request": {
+						"url": " https://rest-demo.tradingview.com/tradingview/v1/symbol_info",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/history?symbol=EURUSD&resolution=1W&from=1539129600&to=1541808000",
+					"request": {
+						"url": {
+							"raw": "https://rest-demo.tradingview.com/tradingview/v1/history?symbol=EURUSD&resolution=1W&from=1539129600&to=1541808000",
+							"protocol": "https",
+							"host": [
+								"rest-demo",
+								"tradingview",
+								"com"
+							],
+							"path": [
+								"tradingview",
+								"v1",
+								"history"
+							],
+							"query": [
+								{
+									"key": "symbol",
+									"value": "EURUSD",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "resolution",
+									"value": "1W",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "from",
+									"value": "1539129600",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "to",
+									"value": "1541808000",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": " https://rest-demo.tradingview.com/tradingview/v1/streaming",
+					"request": {
+						"url": " https://rest-demo.tradingview.com/tradingview/v1/streaming",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic 89675874",
+								"description": ""
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
